@@ -1,0 +1,39 @@
+<html>
+<head>
+   <title>Funciones</title> 
+</head>
+<body>
+<h1>Hallar la altura de una Torre en caida libre</h1>
+<img src="./Captura.PNG"/>
+<h3>Ingresa las variables</h3>
+<form>
+   <p>Escribe aquí el tiempo de caida:</p>
+   <input type="text" name="tiempo" id="tiempo"/>
+   <p>En la caida libre las variables de gravedad ( g = 9.8m/s^2), velocidad inicial (v = 0)
+       y altura final son constantes (h = 0, el objeto ya se encuentra en el suelo)
+   </p>
+   <p><input type="submit" value="Ver altura Torre" onclick="alerta()"/></p>
+</form>
+<div id="cont1">
+</div>
+<script type="text/javascript">
+   function alerta() {
+       let tiempo = document.getElementById("tiempo").value
+       console.log('imprimir: ', tiempo);
+       console.log('imprimir: ', tiempo);
+       tiempo =  parseFloat(tiempo)
+       console.log('imprimir: ', tiempo);
+       tiempo = Math.pow(tiempo, 2)
+       console.log('imprimir: ', tiempo);
+       const gravedad = (9.8)/2
+       const alturaTorre = tiempo * gravedad
+       document.getElementById('cont1').innerHTML =`
+       <p">La altura de la torre desde que se lanzó el objeto
+               <br>
+        con tiempo $n es de: ${alturaTorre}</p>
+       `
+       console.log('imprimir: ', alturaTorre);
+   }
+</script>
+</body>
+</html>
